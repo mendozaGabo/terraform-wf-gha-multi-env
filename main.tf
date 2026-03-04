@@ -11,7 +11,9 @@ resource "aws_s3_bucket" "env_bucket" {
     Environment = terraform.workspace
   }
 }
-
+variable "aws_region"{
+  default="eu-west-1"
+}
 
 output "workspace_name" {
   value = terraform.workspace
